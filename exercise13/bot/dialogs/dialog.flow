@@ -1,0 +1,2 @@
+/ -> checkprofile(), welcome
+/profile -> prompt.name, prompt.age, prompt.language, showData

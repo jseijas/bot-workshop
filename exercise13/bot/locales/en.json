@@ -1,0 +1,3 @@
+{
+	"Hello {{ message.user.name }}": "Hello {{ message.user.name }}"
+}

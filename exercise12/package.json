@@ -1,0 +1,17 @@
+{
+  "name": "exercise12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "",
+  "dependencies": {
+    "flow-bot": "^1.0.8",
+    "restify": "^4.3.0"
+  }
+}
+
+

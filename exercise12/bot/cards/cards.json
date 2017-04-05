@@ -1,0 +1,55 @@
+[
+  {
+    "name": "welcome",
+    "type": "text",
+    "text": "Hello {{ message.user.name }}"
+  },
+  {
+    "name": "prompt.name",
+    "type": "prompt",
+    "prompt": "text",
+    "text": "Hello, What's your name?",
+    "variable": "user.name"
+  },
+  {
+    "name": "prompt.age",
+    "type": "prompt",
+    "prompt": "number",
+    "text": "Hi {{ user.name }}. How old are you?",
+    "variable": "user.age"
+  },
+  {
+    "name": "prompt.language",
+    "type": "prompt",
+    "prompt": "choice",
+    "text": "What language do you use to code Node?",
+    "variable": "user.language",
+    "options": [
+      {
+        "text": "ES5",
+        "tag": "ES5"
+      },
+      {
+        "text": "ES6",
+        "tag": "ES6"
+      },
+      {
+        "text": "ES7",
+        "tag": "ES7"
+      },
+      {
+        "text": "TypeScript",
+        "tag": "TypeScript"
+      },
+      {
+        "text": "CoffeScript",
+        "tag": "CoffeScript"
+      }
+    ]
+  },
+  {
+    "name": "showData",
+    "type": "text",
+    "text": "Ok {{ user.name }}. You're {{ user.age }} years old and use {{ user.language }} to code. "
+  }
+]

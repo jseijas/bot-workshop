@@ -1,0 +1,12 @@
+[
+  {
+    "name": "welcome",
+    "type": "text",
+    "text": "Hello {{ message.user.name }}"
+  },
+  {
+    "name": "another",
+    "type": "text",
+    "text": "This is another message in the pipeline"
+  }
+]

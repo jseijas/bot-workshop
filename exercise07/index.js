@@ -1,5 +1,5 @@
 /**
- * Connect to the emulator and https://dev.botframework.com!
+ * Actions
  */
 var builder = require('botbuilder');
 var restify = require('restify');
@@ -19,6 +19,15 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
+
+/**
+ * Actions
+ */
+
+bot.endConversationAction('goodbye', 'Goodbye :)', { matches: /^goodbye/i });
+bot.beginDialogAction('help', '/help', { matches: /^help/i });
+bot.beginDialogAction('reset', '/reset', { matches: /^reset/i });
+bot.beginDialogAction('menu', '/menu', { matches: /^menu/i });
 
 /**
  * Create the dialogs
@@ -133,3 +142,18 @@ bot.dialog('/profile', [
   }
 ]);
 
+bot.dialog('/help', [
+  function (session) {
+    session.endDialog('Global commands that are available anytime:\n\n* goodbye - End this conversation.\n* help - Displays these commands.\n* menu - Executes the menu\n* reset - Reset the data');
+  }
+]);
+
+bot.dialog('/reset', [
+  function (session, args, next) {
+    session.userData.name = null;
+    session.userData.age = null;
+    session.userData.language = null;
+    session.send('Profile reseted.');
+    session.endDialog();
+  }
+]);
