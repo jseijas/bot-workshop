@@ -1,0 +1,7 @@
+/ -> checkprofile(), greetings, /menu, goodbye
+/profile -> /askName, /askAge, /askLanguage, /showData
+/menu*
+/askName -> prompt.name
+/askAge -> prompt.age
+/askLanguage -> prompt.language
+/showData

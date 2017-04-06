@@ -1,5 +1,5 @@
 {
-  "name": "exercise13",
+  "name": "exercise15",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,9 @@
   },
   "author": "",
   "dependencies": {
-    "flow-bot": "^1.0.16",
+    "flow-bot": "^1.0.8",
     "restify": "^4.3.0"
   }
 }
+
+

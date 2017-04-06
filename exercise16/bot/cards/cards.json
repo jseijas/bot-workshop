@@ -1,0 +1,254 @@
+[
+  {
+    "name": "welcome",
+    "type": "hero",
+    "title": "Demo of the Microsoft Bot Framework",
+    "image": "http://docs.botframework.com/images/demo_bot_image.png",
+    "text": "What can do your bots?"
+  },
+  {
+    "name": "welcome2",
+    "type": "text",
+    "text": "Hi. I'm a demo of the UI element of a bot"
+  },
+  {
+    "name": "goodbye",
+    "type": "text",
+    "text": "Ok... See you later!"
+  },
+  {
+    "name": "menu",
+    "type": "prompt",
+    "prompt": "choice",
+    "isMenu": true,
+    "text": "What demo would you like to run?",
+    "variable": "",
+    "options": [
+      {
+        "text": "Prompts",
+        "tag": "prompts"
+      },
+      {
+        "text": "Picture",
+        "tag": "picture"
+      },
+      {
+        "text": "Cards",
+        "tag": "cards"
+      },
+      {
+        "text": "List",
+        "tag": "list"
+      },
+      {
+        "text": "Carousel",
+        "tag": "carousel"
+      },
+      {
+        "text": "Receipt",
+        "tag": "receipt"
+      },
+      {
+        "text": "Quit",
+        "tag": "endDialog"
+      }
+    ]
+  },
+  {
+    "name": "prompts",
+    "type": "text",
+    "text": "prompts"
+  },
+  {
+    "name": "picture1",
+    "type": "text",
+    "text": "You can easily send pictures to a user..."
+  },
+  {
+    "name": "list",
+    "type": "text",
+    "text": "list"
+  },
+  {
+    "name": "carousel",
+    "type": "text",
+    "text": "carousel"
+  },
+  {
+    "name": "receipt",
+    "type": "text",
+    "text": "receipt"
+  },
+  {
+    "name": "picture2",
+    "type": "image",
+    "images": [
+      {
+        "contentType": "image/jpeg",
+        "contentUrl": "http://www.theoldrobots.com/images62/Bender-18.JPG"
+      }
+    ]
+  },
+  {
+    "name": "cards1",
+    "type": "text",
+    "text": "You can use either a Hero or a Thumbnail card to send the user visually rich information. On Facebook both will be rendered using the same Generic Template..."
+  },
+  {
+    "name": "cards2",
+    "type": "hero",
+    "title": "Hero Card",
+    "subtitle": "The Space Needle is an observation tower in Seattle, Washington, a landmark of the Pacific Northwest, and an icon of Seattle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Seattlenighttimequeenanne.jpg/320px-Seattlenighttimequeenanne.jpg",
+    "tap": {
+      "type": "openurl",
+      "url": "https://en.wikipedia.org/wiki/Space_Needle"
+    }
+  },
+  {
+    "name": "cards3",
+    "type": "thumbnail",
+    "title": "Thumbnail Card",
+    "subtitle": "Pike Place Market is a public market overlooking the Elliott Bay waterfront in Seattle, Washington, United States.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/PikePlaceMarket.jpg/320px-PikePlaceMarket.jpg",
+    "tap": {
+      "type": "openurl",
+      "url": "https://en.wikipedia.org/wiki/Pike_Place_Market"
+    }
+  },
+  {
+    "name": "prompts.text",
+    "type": "prompt",
+    "prompt": "text",
+    "text": "Our Bot Builder SDK has a rich set of built-in prompts that simplify asking the user a series of questions. This demo will walk you through using each prompt. Just follow the prompts and you can quit at any time by saying 'cancel'.\nPrompts.text()\n\nEnter some text and I'll say it back.",
+    "variable": "dialog.text"
+  },
+  {
+    "name": "prompts.number",
+    "type": "prompt",
+    "prompt": "number",
+    "text": "You entered '{{ dialog.text }}'\nPrompts.number()\n\nNow enter a number.",
+    "variable": "dialog.number"
+  },
+  {
+    "name": "prompts.style",
+    "type": "prompt",
+    "prompt": "choice",
+    "text": "You entered '{{ dialog.number }}'\nBot Builder includes a rich choice() prompt that lets you offer a user a list choices to pick from. On Facebook these choices by default surface using Quick Replies if there are 10 or less choices. If there are more than 10 choices a numbered list will be used but you can specify the exact type of list to show using the ListStyle property.Prompts.choice()\n\nChoose a list style (the default is auto.)",
+    "variable": "dialog.listStyle",
+    "options": "auto|inline|list|button|none"
+  },
+  {
+    "name": "prompts.choice",
+    "type": "prompt",
+    "prompt": "choice",
+    "style": "{{ dialog.listStyle }}",
+    "text": "Prompts.choice()\n\nNow pick an option.",
+    "variable": "dialog.choice",
+    "options": "option A|option B|option C"
+  },
+  {
+    "name": "prompts.confirm",
+    "type": "prompt",
+    "prompt": "confirm",
+    "text": "You chose '{{ dialog.choice }}'\nPrompts.confirm()\n\nSimple yes/no questions are possible. Answer yes or no now.",
+    "variable": "dialog.confirm"
+  },
+  {
+    "name": "prompts.time",
+    "type": "prompt",
+    "prompt": "time",
+    "text": "You chose {{ dialog.confirm }}\nPrompts.time()\n\nThe framework can recognize a range of times expressed as natural language. Enter a time like 'Monday at 7am' and I'll show you the JSON we return.",
+    "variable": "dialog.time"
+  },
+  {
+    "name": "prompts.attachment",
+    "type": "prompt",
+    "prompt": "attachment",
+    "text": "Recognized Entity: {{{ dialog.timestr }}}\nPrompts.attachment()\n\nYour bot can wait on the user to upload an image or video. Send me an image and I'll send it back to you.",
+    "variable": "dialog.attachment"
+  },
+  {
+    "name": "cards.hero1",
+    "type": "hero",
+    "title": "Space Needle",
+    "subtitle": "The Space Needle is an observation tower in Seattle, Washington, a landmark of the Pacific Northwest, and an icon of Seattle.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Seattlenighttimequeenanne.jpg/320px-Seattlenighttimequeenanne.jpg",
+    "buttons": [
+      { "title": "Wikipedia", "type": "openurl", "url": "https://en.wikipedia.org/wiki/Space_Needle" },
+      { "title": "Select", "type": "imback", "value": "select:100" }
+    ]
+  },
+  {
+    "name": "cards.hero2",
+    "type": "hero",
+    "title": "Pikes Place Market",
+    "subtitle": "Pike Place Market is a public market overlooking the Elliott Bay waterfront in Seattle, Washington, United States.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/PikePlaceMarket.jpg/320px-PikePlaceMarket.jpg",
+    "buttons": [
+      { "title": "Wikipedia", "type": "openurl", "url": "https://en.wikipedia.org/wiki/Pike_Place_Market" },
+      { "title": "Select", "type": "imback", "value": "select:101" }
+    ]
+  },
+  {
+    "name": "cards.hero3",
+    "type": "hero",
+    "title": "EMP Museum",
+    "subtitle": "EMP Musem is a leading-edge nonprofit museum, dedicated to the ideas and risk-taking that fuel contemporary popular culture.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Night_Exterior_EMP.jpg/320px-Night_Exterior_EMP.jpg",
+    "buttons": [
+      { "title": "Wikipedia", "type": "openurl", "url": "https://en.wikipedia.org/wiki/EMP_Museum" },
+      { "title": "Select", "type": "imback", "value": "select:102" }
+    ]
+  },
+  {
+    "name": "cards.thumbnail",
+    "type": "thumbnail",
+    "title": "Thumbnail Card",
+    "subtitle": "Pike Place Market is a public market overlooking the Elliott Bay waterfront in Seattle, Washington, United States.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/PikePlaceMarket.jpg/320px-PikePlaceMarket.jpg",
+    "tap": {
+      "type": "openurl",
+      "url": "https://en.wikipedia.org/wiki/Pike_Place_Market"
+    }
+  },
+  {
+    "name": "list",
+    "type": "list",
+    "cards": ["cards.hero1","cards.hero2", "cards.hero3"]
+  },
+  {
+    "name": "carousel",
+    "type": "carousel",
+    "cards": ["cards.hero1","cards.hero2", "cards.hero3"]
+  },
+  {
+    "name": "receipt",
+    "type": "receipt",
+    "title": "Recipient's Name",
+    "items":[
+      {
+        "key": "EMP Museum",
+        "value": "$22.00",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Night_Exterior_EMP.jpg"
+      },
+      {
+        "key": "Space Needle",
+        "value": "$22.00",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Seattlenighttimequeenanne.jpg"
+      }
+    ],
+    "facts": [
+      {
+        "key": "Order Number",
+        "value": "1234567898"
+      },
+      {
+        "key": "Payment Method",
+        "value": "VISA 4076"
+      }
+    ],
+    "tax": "$4.40",
+    "total": "$48.40"
+  }  
+]

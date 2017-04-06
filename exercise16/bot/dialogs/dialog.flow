@@ -1,0 +1,8 @@
+/ -> welcome, welcome2, /menu, goodbye
+/menu*
+/prompts -> prompts.text, prompts.number, prompts.style, prompts.choice, prompts.confirm, prompts.time, stringifytime(), prompts.attachment, replyattachment()
+/picture -> picture1, picture2
+/cards -> cards1, cards2, cards3
+/list
+/carousel
+/receipt
